@@ -1,0 +1,68 @@
+body {
+    background-color: antiquewhite;
+}
+
+
+#ilya label {
+    color: black;
+    display: block;
+    margin-bottom: 0px;
+    margin-top: 7px;
+}
+
+#ilya input {
+    width: 150px;
+    height: 25px;
+    margin: 5px;
+}
+
+#ilya select {
+    width: 150px;
+    height: 25px;
+    margin: 5px;
+}
+
+#ilya {
+    display: flex;
+    flex-direction: row;
+}
+
+#p1 {
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#vanya input{
+    width: 150px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.third_div{
+    display: flex;
+    flex-direction: column;
+}
+
+.third_div.input{
+    width: 200px;
+}
+.second_div.input{
+    width: 200px;
+}
+
+/* .second{
+    display: flex;
+    flex-direction: row;
+} */
+
+#row1{
+    display: flex;
+    flex-direction: row;
+}
+
+.third_object {
+    margin-top: 5px;
+}
+
