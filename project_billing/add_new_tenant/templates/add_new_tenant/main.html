@@ -4,17 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
-    <script src="{% static 'main/js/script.js' %}" defer></script> -->
     <link rel="stylesheet" href="{% static 'add_new_tenant/css/main.css' %}">
 </head>
 <body>
-    <!-- <h1>Вітаю на нашому сайті, {{user.username}}!</h1>
-    <form action="" method="POST">
-        {% csrf_token %}
-        <button class="logout">Logout</button>
-        
-    </form> -->
     <form action="" method="POST">
         {% csrf_token %}
         <div id = "ilya">
@@ -23,7 +15,7 @@
                 <option value="first_mall">Днепр - Зоряный</option>
                 <option value="second_mall">Харьков - Героев Труда 9</option>
             </select>
-            <label for="number_contract">Номер договора:</label>
+            <label for="number_contract">&nbsp;Номер договора:</label>
             <input type="text" name="number_contract" id="number_contract"> 
         </div>
     <p id="p1">Срок действия:</p>
@@ -38,35 +30,16 @@
         <div class = 'vanyadiv2'> 
             <label for="data_contract">Дата договора:</label>
             <input type="date" name="data_contract" id="data_contract" value="2024-02-10" min="2024-02-10" max="2100-01-01">
-            <!-- <input type="text" placeholder='Ошибок не обнаружено' readonly id = 'vanyainput'> -->
         </div>
         <hr>
     </div>
         <div class="second_div" id = "diana1">
             <span class="second">
-                <!-- <p >Арендодатель:</p>
-                <select name="landlord">
-                    <option value="first_arendodatel">1</option>
-                    <option value="second_arendodatel">2</option>
-                    <option value="third_arendodatel">3</option>
-                </select> -->
                 <label for="landlord_input">Арендодатель:</label>
                 <input type="text" name="landlord" id="landlord_input">
-                <!-- <p>Арендатор:</p>
-                <select name="tenant">
-                    <option value="first_arendodator">1</option>
-                    <option value="second_arendodator">2</option>
-                    <option value="third_arendodator">3</option>
-                </select> -->
                 <label for="tenant_input">Арендатор:</label>
                 <input type="text" name="tenant" id="tenant_input">
             </span>
-            <!-- <p>Арендодатель P/C:</p>
-            <select name="landlordPC">
-                <option value="first_arendodatelPC">абоба</option>
-                <option value="second_arendodatelPC">абобус</option>
-                <option value="third_arendodatelPC">автобус</option>
-            </select> -->
             <label for="landlordPC_input">Арендодатель P/C:</label>
             <input type="text" name="landlordPC" id="landlordPC_input">
             <p id="p1">Прочее:</p>
@@ -121,6 +94,6 @@
         <button class="third_object">Сохранить</button>
         <button class="third_object">Отменить</button>
     </form>
-    <a href="{% url 'logouts' %}">Logout</a>
+    <a href="{% url 'logouts' %}" class="logouts">Logout</a>
 </body>
 </html>

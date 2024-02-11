@@ -2,24 +2,11 @@ body {
     background-color: antiquewhite;
 }
 
-
 #ilya label {
     color: black;
     display: block;
-    margin-bottom: 0px;
-    margin-top: 7px;
-}
-
-#ilya input {
-    width: 150px;
-    height: 25px;
-    margin: 5px;
-}
-
-#ilya select {
-    width: 150px;
-    height: 25px;
-    margin: 5px;
+    margin-top: 3px;
+    margin-right: 5px;
 }
 
 #ilya {
@@ -34,6 +21,13 @@ body {
     margin-top: 15px;
 }
 
+.logouts {
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
+
 #vanya input{
     width: 150px;
     height: 25px;
@@ -43,13 +37,6 @@ body {
 .third_div{
     display: flex;
     flex-direction: column;
-}
-
-.third_div.input{
-    width: 200px;
-}
-.second_div.input{
-    width: 200px;
 }
 
 #row1{

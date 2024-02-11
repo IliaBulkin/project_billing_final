@@ -70,17 +70,17 @@ $(document).ready(function(){
                         $('#switch').html("Зробити акаунт")
                         $('#switch').removeClass('have_account')
                         $('#switch').addClass('make_account')
-                        $('.first_name').remove()
-                        $('#login').remove()
-                        $('#password').remove()
-                        $('#login_label').remove()
-                        $('#password_label').remove()
-                        $('.form').append(
-                            `<label for="login">Login</label>
-                            <input type="text" name="login" id="login">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password">`
-                        )
+                        // $('.first_name').remove()
+                        // $('#login').remove()
+                        // $('#password').remove()
+                        // $('#login_label').remove()
+                        // $('#password_label').remove()
+                        // $('.form').append(
+                        //     `<label for="login">Login</label>
+                        //     <input type="text" name="login" id="login">
+                        //     <label for="password">Password</label>
+                        //     <input type="password" name="password" id="password">`
+                        // )
                         $('#send').removeClass('reg')
                         $('#send').addClass('log')
 
@@ -94,19 +94,3 @@ $(document).ready(function(){
         }
     })
 })
-
-// $(document).ready(function() {
-//     $('.logout').click(function() {
-//         console.log(111)
-//         $.ajax({
-//             url: '/ajax/',
-//             type: 'POST',
-//             data: {
-//                 type: 'logout'
-//             },
-//             success: function(response) {
-
-//             }
-//         })
-//     })
-// })

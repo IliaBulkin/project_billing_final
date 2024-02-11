@@ -13,9 +13,11 @@ from django.views.decorators.csrf import csrf_exempt
 def reg(request):
     context = {}
     return render(request, 'add_new_tenant/reg.html', context)
+
 def logouts(request):
     logout(request)
     return redirect('reg')
+
 @csrf_exempt
 def main(request):
     context = {}
@@ -56,12 +58,8 @@ def main(request):
             client_info.save()
         else:
             context['error'] = 'Заповніть всі поля!'
-        
-        # if 'logout' in request.POST:
-        #     logout(request)
-        #     return redirect('reg')
-
     return render(request, 'add_new_tenant/main.html', context)
+
 @csrf_exempt
 def ajax(request):
     
@@ -94,5 +92,4 @@ def ajax(request):
                     context['error'] = 'Такого користувача не знайдено!'
             else:
                 context['error'] = 'Заповніть всі поля!'
-    
     return JsonResponse(context)
