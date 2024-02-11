@@ -70,7 +70,7 @@ $(document).ready(function(){
                         $('#switch').html("Зробити акаунт")
                         $('#switch').removeClass('have_account')
                         $('#switch').addClass('make_account')
-                        // $('.first_name').remove()
+                        $('.first_name').remove()
                         // $('#login').remove()
                         // $('#password').remove()
                         // $('#login_label').remove()
