@@ -33,23 +33,27 @@ def main(request):
         number_contract_count1 = request.POST.get("number_contract_count")
         main_contract1 = request.POST.get("main_contract")
         main_lot1 = request.POST.get("main_lot")
-        client_info = Client.objects.create(shopping_center=shopping_center1, 
-                                            number_contract=number_contract1,
-                                            start_contract=start_contract1,
-                                            data_to= data_to1,
-                                            data_contract=data_contract1,
-                                            landlord=landlord1, 
-                                            tenant=tenant1, 
-                                            landlordPC=landlordPC1,  
-                                            type_contract= type_contract1,
-                                            advertising_tax = advertising_tax1,
-                                            working=working1,
-                                            closed=closed1,
-                                            comment=comment1,
-                                            number_contract_count=number_contract_count1,
-                                            main_lot=main_lot1,
-                                            main_contract=main_contract1)
-        client_info.save()
+        if shopping_center1 and number_contract1 and start_contract1 and data_to1 and data_contract1 and landlord1 and tenant1:
+            client_info = Client.objects.create(shopping_center=shopping_center1, 
+                                                number_contract=number_contract1,
+                                                start_contract=start_contract1,
+                                                data_to= data_to1,
+                                                data_contract=data_contract1,
+                                                landlord=landlord1, 
+                                                tenant=tenant1, 
+                                                landlordPC=landlordPC1,  
+                                                type_contract= type_contract1,
+                                                advertising_tax = advertising_tax1,
+                                                working=working1,
+                                                closed=closed1,
+                                                comment=comment1,
+                                                number_contract_count=number_contract_count1,
+                                                main_lot=main_lot1,
+                                                main_contract=main_contract1)
+            client_info.save()
+        else:
+            context['error'] = 'Заповніть всі поля!'
+        
         # if 'logout' in request.POST:
         #     logout(request)
         #     return redirect('reg')

@@ -10,11 +10,11 @@ class Client(models.Model):
     landlord = models.CharField(max_length = 255) # под арендодатель
     tenant = models.CharField(max_length = 255) # под арендатор
     landlordPC = models.CharField(max_length = 255, null=True, blank=True, default=None) # под арендодатель пс
-    type_contract = models.CharField(max_length = 255) # под тип договора
+    type_contract = models.CharField(max_length = 255, null=True, blank=True, default=None) # под тип договора
     advertising_tax = models.CharField(max_length = 255, null=True, blank=True, default=None) # под налог на рекламу
     working = models.CharField(max_length = 255, null=True, blank=True, default=None) # под в работе
     closed = models.CharField(max_length = 255, null=True, blank=True, default=None) # под закрыт(архив)
-    comment = models.CharField(max_length = 255, default=None) # под комментарий
-    number_contract_count = models.CharField(max_length = 255, default=None) # под номер договора в счете
-    main_contract = models.CharField(max_length = 255) # под основной договор
-    main_lot = models.CharField(max_length = 255, default=None) # под основной лот
+    comment = models.CharField(max_length = 255, null=True, blank=True, default=None) # под комментарий
+    number_contract_count = models.CharField(max_length = 255, null=True, blank=True, default=None) # под номер договора в счете
+    main_contract = models.CharField(max_length = 255, null=True, blank=True, default=None) # под основной договор
+    main_lot = models.CharField(max_length = 255, null=True, blank=True, default=None) # под основной лот

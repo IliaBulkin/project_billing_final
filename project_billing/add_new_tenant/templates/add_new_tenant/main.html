@@ -113,6 +113,11 @@
                 <input class="third_object" type="text" name="main_lot" id="main_lot">
             </span>
         </div>
+        <div class="error">
+            {% if error %}
+                <p id="error" style="font-weight: bold; color: brown;">{{error}}</p>
+            {% endif %}
+        </div>
         <button class="third_object">Сохранить</button>
         <button class="third_object">Отменить</button>
     </form>
