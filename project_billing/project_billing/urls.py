@@ -22,4 +22,5 @@ urlpatterns = [
     path('', reg, name='reg'),
     path('main/', main, name='main'),
     path('ajax/', ajax, name='ajax'),
+    path('logouts/', logouts, name='logouts')
 ]

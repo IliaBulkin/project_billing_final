@@ -13,6 +13,9 @@ from django.views.decorators.csrf import csrf_exempt
 def reg(request):
     context = {}
     return render(request, 'add_new_tenant/reg.html', context)
+def logouts(request):
+    logout(request)
+    return redirect('reg')
 @csrf_exempt
 def main(request):
     context = {}
