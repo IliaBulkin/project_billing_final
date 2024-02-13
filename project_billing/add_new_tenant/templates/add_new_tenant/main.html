@@ -10,71 +10,71 @@
     <form action="" method="POST">
         {% csrf_token %}
         <div id = "ilya">
-            <label for="shopping_center">Торговый комплекс:</label>
+            <label for="shopping_center">Торгівельний комплекс:</label>
             <select name="shopping_center" id="shopping_center">
-                <option value="first_mall">Днепр - Зоряный</option>
-                <option value="second_mall">Харьков - Героев Труда 9</option>
+                <option value="first_mall">Дніпро - Зоряний</option>
+                <option value="second_mall">Харків - Героїв Праці 9</option>
             </select>
             <label for="number_contract">&nbsp;Номер договора:</label>
             <input type="text" name="number_contract" id="number_contract"> 
         </div>
-    <p id="p1">Срок действия:</p>
+    <p id="p1">Термін дії:</p>
     <hr>
     <div id = "vanya">
         <div class = 'vanyadiv1'>
-            <label for="start_contract">Начало договора:</label>
+            <label for="start_contract">Початок договору:</label>
             <input type="date" name="start_contract" id="start_contract" value="2024-02-10" min="2024-02-10" max="2100-01-01">
             <label for="data_to">Дата По:</label>
             <input type="date" name="data_to" id="data_to" value="2024-02-10" min="2024-02-10" max="2100-01-01">
         </div>
         <div class = 'vanyadiv2'> 
-            <label for="data_contract">Дата договора:</label>
+            <label for="data_contract">Дата договору:</label>
             <input type="date" name="data_contract" id="data_contract" value="2024-02-10" min="2024-02-10" max="2100-01-01">
         </div>
         <hr>
     </div>
         <div class="second_div" id = "diana1">
             <span class="second">
-                <label for="landlord_input">Арендодатель:</label>
+                <label for="landlord_input">Орендодавець:</label>
                 <input type="text" name="landlord" id="landlord_input">
-                <label for="tenant_input">Арендатор:</label>
+                <label for="tenant_input">Орендар:</label>
                 <input type="text" name="tenant" id="tenant_input">
             </span>
-            <label for="landlordPC_input">Арендодатель P/C:</label>
+            <label for="landlordPC_input">Орендодавець P/C:</label>
             <input type="text" name="landlordPC" id="landlordPC_input">
-            <p id="p1">Прочее:</p>
+            <p id="p1">Інше:</p>
         </div>
     <hr>
         <div class="third_div" id = "diana2">
             <span class="third">
-                <label class="third_object" for="type_contract">Тип договора:</label>
+                <label class="third_object" for="type_contract">Тип договору:</label>
                 <select class="third_object" name="type_contract" id="type_contract">
-                    <option class="third_object" value="first_type">Договора Энергетика</option>
-                    <option class="third_object" value="second_type">Договора Старшого Энергетика</option>
-                    <option class="third_object" value="third_type">Договора Директора</option>
+                    <option class="third_object" value="first_type">Договори Енергетика</option>
+                    <option class="third_object" value="second_type">Договори Старшого Енергетика</option>
+                    <option class="third_object" value="third_type">Договори Директора</option>
                 </select>
                 <span id="row1">
                     <input class="third_object" type="checkbox" id="advertising_tax" name="advertising_tax" value="advertising_tax">
-                    <label class="third_object" for="advertising_tax">Налог на рекламу</label><br>
+                    <label class="third_object" for="advertising_tax">Податок на рекламу</label><br>
                 </span>
             </span>
             <span class="third">
                 <input class="third_object" type="checkbox" id="working" name="working" value="working">
-                <label class="third_object" for="working">В работе</label><br>
+                <label class="third_object" for="working">В роботі</label><br>
 
                 <input class="third_object" type="checkbox" id="closed" name="closed" value="closed">
-                <label class="third_object" for="closed">Закрыт(Архив)</label><br>
+                <label class="third_object" for="closed">Закритий(Архів)</label><br>
             </span>
             <span>
-                <label class="third_object" for="comment">Коментарий:</label>
+                <label class="third_object" for="comment">Коментар:</label>
                 <input class="third_object" type="text" class="third_input" name="comment" id="comment">
             </span>
             <span>
-                <label class="third_object" for="number_contract_count">Номер договора в счете:</label>
+                <label class="third_object" for="number_contract_count">Номер договору у рахунку:</label>
                 <input class="third_object" type="text" class="third_input" name="number_contract_count" id="number_contract_count">
             </span>
             <span>
-                <label class="third_object" for="main_contract">Основной договор:</label>
+                <label class="third_object" for="main_contract">Основний договір:</label>
                 <select class="third_object" name="main_contract" id="main_contract">
                     <option class="third_object" value="first_main">12354</option>
                     <option class="third_object" value="second_main">32972</option>
@@ -82,7 +82,7 @@
                 </select>
             </span>
             <span>
-                <label class="third_object" for="main_lot">Основной лот:</label>
+                <label class="third_object" for="main_lot">Основний лот:</label>
                 <input class="third_object" type="text" name="main_lot" id="main_lot">
             </span>
         </div>
@@ -91,8 +91,8 @@
                 <p id="error" style="font-weight: bold; color: brown;">{{error}}</p>
             {% endif %}
         </div>
-        <button class="third_object">Сохранить</button>
-        <button class="third_object">Отменить</button>
+        <button class="third_object">Зберегти</button>
+        <button class="third_object">Скасувати</button>
     </form>
     <a href="{% url 'logouts' %}" class="logouts">Logout</a>
 </body>
